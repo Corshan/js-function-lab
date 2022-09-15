@@ -3,8 +3,8 @@ fetch("https://jsonplaceholder.typicode.com/todos")
   .then(json => {
     const uncompleted = json.reduce((total, todo, index, array) =>{
       if(todo.completed === true) total.push({userId : todo.userId, title : todo.title})
-      return total
-    }, [])
+      return total;
+    }, []);
      console.log(uncompleted);
   })
   .catch(function(err) { 
